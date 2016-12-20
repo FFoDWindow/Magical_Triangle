@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link type="text/css" rel="stylesheet" href="./css/style.css" />
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="./js/dreieck.js"></script>
+</head>
+<body>
+<div id="header">
+<h1> Magical Triangle </h1>
+</div>
+<div id="inputs">
+	<p>Draw a "Magical Triangle"(name may be wrong). We will split the sides equidistantly and connect the resulting points with lines.</p> 
+	Fineness:</br>
+	<input id="input_fineness" type="text"/>
+	Sidelength:</br>
+	<input id="input_length" type="text"/> </br>
+	<button id="submit" type="button">Zeichne!</button>
+
+</div>
+<svg id="svg" width="900" height="600"></svg>
+
+<script>
+	function drawTriangle(){
+		var divisor = parseInt(document.getElementById("input_fineness").value),
+			distance = parseInt(document.getElementById("input_length").value);
+		
+		var graph = new Dreieck(divisor, distance);
+	}
+
+	d3.selectAll("#submit").on("click", drawTriangle);
+
+</script>
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

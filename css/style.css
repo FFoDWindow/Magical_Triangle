@@ -1,0 +1,21 @@
+h1{
+	font-size:2em;
+}
+
+p{
+	text-align:center;
+	font-size:1em;
+}
+
+div#header{
+	width:100%;
+	text-align:center;
+}
+
+
+div#inputs{
+	float:left;
+	width:200px;
+	height:600px;
+	border:1px solid;
+}
